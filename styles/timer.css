@@ -1,0 +1,429 @@
+@import url("https://fonts.cdnfonts.com/css/led-digital-7");
+body {
+  background-color: #f3c8c8;
+}
+.cont-tl {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tl {
+  color: white;
+  font-size: 100px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.cont-tl img {
+  width: 150px;
+}
+.cont-timer {
+  width: 100%;
+}
+#cont-fire {
+  width: 380px;
+  height: 380px;
+  margin: auto;
+  text-align: center;
+}
+#boomfin {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+#circle {
+  margin: auto;
+  width: 380px;
+  height: 380px;
+  background-color: #363636;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: transform 2s;
+  border-radius: 100%;
+}
+
+.radiation {
+  width: 100%;
+  background-color: #6a3c1000;
+  text-align: center;
+}
+.radiation img {
+  margin-top: 20px;
+  width: 100px;
+}
+.screenLCD {
+  width: 80%;
+  background-color: #5c5c5c;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.LCD-out {
+  width: 100%;
+}
+.tbl-out {
+  margin: auto;
+  text-align: center;
+}
+#output {
+  margin: auto;
+}
+#output td {
+  text-align: center;
+  color: #3b438a;
+  font-size: 40px;
+  font-family: "LED Digital 7", sans-serif;
+  width: 25%;
+}
+.base {
+  margin: auto;
+}
+.base td {
+  border-top: 1px solid white;
+  color: white;
+  width: 25%;
+  font-size: 15px;
+  text-align: center;
+}
+.cont-buttons {
+  width: 80%;
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: -25px;
+}
+.cont-buttons:hover {
+  cursor: grab;
+}
+.cont-buttons:active {
+  cursor: grabbing;
+}
+.marco {
+  width: 80%;
+  background-color: rgb(37, 36, 36);
+  border: 5px solid black;
+  border-radius: 20px;
+}
+#cont-cables {
+  background-color: rgba(0, 255, 255, 0);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#cont-cables img {
+  height: 80px;
+  width: 20px;
+}
+/*.cont-buttons button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.btn-play {
+  background-color: #cc1010;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: auto;
+}
+.btn-play img {
+  width: 100%;
+}
+.btn-restart {
+  background-color: #10971e;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: auto;
+}
+.btn-restart img {
+  width: 100%;
+}*/
+.tisch {
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  border-top: 50px solid #6a3b10;
+  border-left: 50px solid #6a3b10;
+  border-right: 50px solid #6a3b10;
+}
+.cont-btn {
+  background-color: #3b438a00;
+  width: 100%;
+  text-align: center;
+  margin-top: -43px;
+}
+.btnStart30 {
+  width: 15%;
+  height: 35px;
+  border: none;
+  background-color: #c69a00;
+  border-radius: 20px;
+  font-size: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.cont-life {
+  margin-top: 10px;
+  background-color: #eec4c400;
+}
+#life1,
+#life2,
+#life3 {
+  width: 35px;
+  height: 35px;
+}
+
+.cont-input {
+  background-image: url(../images/calendar.png);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: -50px;
+  width: 25%;
+  padding-bottom: 15px;
+}
+
+.tbl-input {
+  margin: auto;
+  width: 80%;
+}
+.tbl-input tr {
+  margin: auto;
+  width: 80%;
+  height: 40px;
+}
+.tbl-tl {
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+.btnStart {
+  width: 100%;
+  border: none;
+  background-color: #359111;
+  border-radius: 20px;
+  font-size: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.tbl-year,
+.tbl-month {
+  width: 50%;
+}
+
+.tbl-year select,
+.tbl-month select {
+  height: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+.tbl-campo,
+.tbl-valor {
+  width: 50%;
+}
+.tbl-campo label {
+  width: 100%;
+  font-size: 25px;
+}
+.tbl-valor input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 10px;
+}
+@media (max-width: 1450px) {
+  .btnStart30 {
+    width: 25%;
+  }
+}
+@media (max-width: 1350px) {
+  .cont-input {
+    width: 30%;
+  }
+}
+@media (max-width: 1150px) {
+  .cont-input {
+    width: 50%;
+  }
+  .btnStart30 {
+    width: 40%;
+  }
+  .cont-btn {
+    text-align: right;
+  }
+  .cont-life {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .cont-input {
+    width: 45%;
+  }
+  .btnStart30 {
+    width: 40%;
+  }
+}
+@media (max-width: 750px) {
+  .tl {
+    font-size: 50px;
+  }
+  .cont-tl img {
+    width: 75px;
+  }
+  .cont-timer {
+    position: relative;
+  }
+  #circle {
+    position: absolute;
+    bottom: 0;
+    left: 90px;
+    width: 200px;
+    height: 200px;
+  }
+  .radiation {
+    width: 100%;
+    background-color: #6a3c1000;
+    text-align: center;
+  }
+  .radiation img {
+    margin-top: 20px;
+    width: 25%;
+  }
+  .screenLCD {
+    width: 80%;
+    background-color: #5c5c5c;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+  .LCD-out {
+    width: 25%;
+  }
+  .tbl-out {
+    margin: auto;
+    text-align: center;
+  }
+  #output {
+    margin: auto;
+  }
+  #output td {
+    text-align: center;
+    color: #3b438a;
+    font-size: 20px;
+    font-family: "LED Digital 7", sans-serif;
+    width: 25%;
+  }
+  .base {
+    margin: auto;
+  }
+  .base td {
+    border-top: 1px solid white;
+    color: white;
+    width: 25%;
+    font-size: 8px;
+    text-align: center;
+  }
+  .cont-buttons {
+    width: 80%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: -25px;
+  }
+  .cont-buttons:hover {
+    cursor: grab;
+  }
+  .cont-buttons:active {
+    cursor: grabbing;
+  }
+  .marco {
+    width: 80%;
+    background-color: rgb(37, 36, 36);
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  #cont-cables {
+    background-color: rgba(0, 255, 255, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #cont-cables img {
+    height: 35px;
+    width: 10px;
+  }
+  .cont-input {
+    width: 45%;
+  }
+  .btnStart30 {
+    width: 40%;
+  }
+  /*----------------------------------------------------TISCH*/
+  .tisch {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    border-top: 35px solid #6a3b10;
+    border-left: 30px solid #6a3b10;
+    border-right: 30px solid #6a3b10;
+  }
+  .cont-btn {
+    position: absolute;
+    bottom: 0px;
+    background-color: #3b438a00;
+    width: 65%;
+  }
+  .btnStart30 {
+    width: 100%;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  .cont-life {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    background-color: #eec4c400;
+  }
+  .cont-input {
+    background-image: url(../images/calendar.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: auto;
+    margin-top: -40px;
+    width: 95%;
+    padding-bottom: 15px;
+  }
+
+  .tbl-input {
+    margin: auto;
+    width: 80%;
+  }
+
+  .tbl-tl {
+    font-size: 25px;
+  }
+  .btnStart {
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .tbl-campo,
+  .tbl-valor {
+    width: 50%;
+  }
+  .tbl-campo label {
+    width: 100%;
+    font-size: 20px;
+  }
+}

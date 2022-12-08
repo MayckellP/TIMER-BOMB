@@ -1,0 +1,21 @@
+.cont-gen {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+label {
+  font-size: 20px;
+}
+#cont-text {
+  border-radius: 20px;
+  border: 1px solid black;
+  height: 40px;
+  padding-left: 10px;
+}
+#showText {
+  text-align: center;
+  width: 50%;
+  margin: 25px;
+  font-size: 30px;
+}
