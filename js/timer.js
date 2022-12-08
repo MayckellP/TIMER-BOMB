@@ -182,7 +182,7 @@ nuevoDefault = () => {
             <td>SECONDS</td>
           </tr>
         </table>`;
-    if (info < 10) {
+    if (info <= 10) {
       timer.style.backgroundColor = "rgb(102, 35, 35)";
     }
     if (info < 7) {
