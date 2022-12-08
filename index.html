@@ -18,6 +18,51 @@
     <title>Timer</title>
   </head>
   <body>
+    <div>
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b class="ints">Instructions</b>
+            <b class="title"> Timer Bomb</b>
+          <img class="img-tl" src="images/time-bomb.png" style="width: 40px;"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Instructions
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <li>You have 2 ways to configure the pump:</li>
+                    <li>-Calendar</li>
+                    <li class="mb-3">-Default (20 seconds)</li>
+                    <li>Inside the pump you have 5 wires, cut the right one to deactivate it.</li>
+                    <li>You have 3 lives.</li>
+                    <li>Good luck! </li>
+                </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="cont-tl">
       <h1 class="tl">TIMER BOMB</h1>
       <img src="images/time-bomb.png" alt="" />
@@ -72,7 +117,7 @@
     <div class="tisch">
       <div class="cont-btn">
         <button class="btnStart30" onclick="nuevoDefault()">
-          <b>START (30 Sek)</b>
+          <b>START (20 Sec.)</b>
         </button>
         <div class="cont-life">
           <img src="images/heart.png" alt="" id="life1" />
@@ -155,6 +200,12 @@
     </div>
     <audio id="aud" controls>
       <source src="audio/Bomb.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="aud2" controls>
+      <source src="audio/Bomb active.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="win" controls>
+      <source src="audio/win.mp3" type="audio/mp3" />
     </audio>
     <!---------------------------------------------------------------------------------------------------------------BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js

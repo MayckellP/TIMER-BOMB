@@ -20,6 +20,10 @@ var year = document.getElementById("year");
 var hour = document.getElementById("hour");
 var minute = document.getElementById("minute");
 var second = document.getElementById("second");
+const timer = document.getElementById("circle");
+var win = document.getElementById("win");
+var sound = document.getElementById("aud");
+var sound2 = document.getElementById("aud2");
 
 // Set the date we're counting down to
 validation = () => {
@@ -42,18 +46,15 @@ saveDate = () => {
     `${month.value} ${day.value}, ${year.value}, ${hour.value}:${minute.value}:${second.value}`
   ).getTime();
   console.log(countDownDate);
-  // Update the count down every 1 second
+
   x = setInterval(function () {
-    // Get today's date and time
     if (nowCopy == undefined) {
       nowCopy = new Date().getTime();
     }
     now = new Date().getTime();
 
-    // Find the distance between now and the count down date
     var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
     days = Math.floor(distance / (1000 * 60 * 60 * 24));
     hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
@@ -65,7 +66,6 @@ saveDate = () => {
     console.log("Fecha Tope(INPUT): " + countDownDate);
     console.log(testmsg);
 
-    // Output the result in an element with id="demo"
     document.getElementById("tbl-out").innerHTML = `
       <table class="tbl-out">
               <tr id="output">
@@ -82,21 +82,14 @@ saveDate = () => {
               </tr>
             </table>`;
     // If the count down is over, write some text
-    if (days == 0 && hours == 0 && minutes == 0 && seconds < 10) {
-      const timer = document.getElementById("circle");
-      var myInterval = setInterval(color10P, 500);
-      color10P();
-      color10P = () => {
-        timer.style.backgroundColor =
-          timer.style.backgroundColor == "red" ? "black" : "red";
-      };
+    if (days == 0 && hours == 0 && minutes == 0 && seconds < 10 && second > 7) {
+      timer.style.backgroundColor = "rgb(102, 35, 35)";
     }
-    if (days == 0 && hours == 0 && minutes == 0 && seconds < 7) {
+    if (days == 0 && hours == 0 && minutes == 0 && seconds < 8 && second > 4) {
       const timer = document.getElementById("circle");
       timer.style.backgroundColor = "rgb(102, 35, 35)";
-      console.log("funcion2");
     }
-    if (days == 0 && hours == 0 && minutes == 0 && seconds < 4) {
+    if (days == 0 && hours == 0 && minutes == 0 && seconds < 4 && second > 1) {
       const timer = document.getElementById("circle");
       timer.style.backgroundColor = "rgb(78, 22, 22)";
       console.log("funcion3");
@@ -109,6 +102,7 @@ saveDate = () => {
     }
   }, 1000);
 };
+
 var defaultSec = 0;
 defaultTime = () => {
   defaultSec = 30;
@@ -118,7 +112,7 @@ defaultTime = () => {
   hour.value = countDownDate.getHours();
   minute.value = countDownDate.getMinutes() + 1;
 };
-defaultTime();
+
 var pauseTimer = () => {
   clearInterval(x);
   clearInterval(intervalId);
@@ -133,6 +127,9 @@ var pauseTimer = () => {
   document.getElementById(
     "cont-fire"
   ).innerHTML = `<img  src="images/congratulation.png" style="width: 100%;">`;
+  win.play();
+  sound.pause();
+  sound2.pause();
 };
 
 var oppo = 3;
@@ -148,6 +145,8 @@ boom = () => {
   }
   if (oppo === 0) {
     clearInterval(x);
+    clearInterval(intervalId);
+    sound2.play();
     document.getElementById(
       "cont-fire"
     ).innerHTML = `<img src="images/explode.png" style="width: 100%;">`;
@@ -155,9 +154,6 @@ boom = () => {
 };
 
 nuevoDefault = () => {
-  const timer = document.getElementById("circle");
-
-  var sound = document.getElementById("aud");
   console.log(sound);
   var count;
   var maxCount = 20;
@@ -191,15 +187,12 @@ nuevoDefault = () => {
         </table>`;
     if (info < 10 && info > 7) {
       timer.style.backgroundColor = "rgb(102, 35, 35)";
-      console.log(info);
     } else if (info < 8 && info > 4) {
       timer.style.backgroundColor = "brown";
       sound.play();
-      console.log(info);
     } else if (info < 4 && info > 1) {
       timer.style.backgroundColor = "rgb(78, 22, 22)";
     } else if (info < 1) {
-      console.log(info);
       clearInterval(intervalId);
       document.getElementById(
         "cont-fire"
